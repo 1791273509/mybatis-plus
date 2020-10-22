@@ -3,9 +3,10 @@ SQLyog Ultimate v8.32
 MySQL - 5.5.36 
 *********************************************************************
 */
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8 */
 1
-
+2
+3
 create table `user` (
 	`id` double ,
 	`name` varchar (90),

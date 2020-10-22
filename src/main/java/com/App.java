@@ -21,7 +21,8 @@ public class App implements CommandLineRunner {
     }
     @Autowired
     private UserMapper userMapper;
-    @Override public void run(String... args) throws Exception {
+    @Override
+    public void run(String... args) throws Exception {
 
             List<User> users = userMapper.selectList(null);
             System.out.println(users);
