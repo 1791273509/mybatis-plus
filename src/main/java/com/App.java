@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2020/10/22
  */
 @SpringBootApplication
-@MapperScan("com.mapper")
+@MapperScan(basePackages = {"com.mapper"})
 public class App implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(App.class,args);
