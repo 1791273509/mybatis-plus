@@ -6,7 +6,8 @@
 *.iml
 # Log file
 *.log
-
+target/
+.gitignore
 # BlueJ files
 *.ctxt
 
