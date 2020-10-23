@@ -4,13 +4,15 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.enetity.User;
 import com.mapper.UserMapper;
-import java.sql.Wrapper;
-import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author wenbaoxie
@@ -46,5 +48,14 @@ public class TestStart {
     }
     public User getById(Long id){
         return userMapper.selectById(id);
+    }
+
+    @Test
+    public void  mapTest(){
+//         相当于 select * from user where age = 23
+        Map<String,Object> map = new HashMap<>();
+        map.put("age",23);
+        List<User> users = userMapper.selectByMap(map);
+        users.forEach(System.out::println);
     }
 }
